@@ -15,21 +15,40 @@
         console.log(myColor);
     </script> -->
 
-    <script>
-        let num = window.prompt();
-        let str = [parseInt(num)];
-        let result = [str[num]];
-
-        for (let x = 1; x < str.length; x++) {
-            if ( (str[x] % 2 === 0)) {
-                result.push('-', str[x]);
-                console.log(result)
-            }
-            else {
-                result.push(str[x]);
+    <!-- <script>
+        let nums = prompt('Nhập dãy số :')
+        let num = nums.split('');
+        for(let i=0;i < num.length;i++){
+            if(num[i]%2==0 && num[i + 1]%2 ==0){
+                num.splice(i+1,0,"-")
             }
         }
-        // console.log(result.join(''));
+        console.log(num);
+        
+    // </script> -->
+
+    <script>
+        let str = 'Abc Xyz';
+        let arr = str.split(" ");
+        for (let i = 0; i < arr.length; i++) {
+            let arr1 = arr[i].split("")
+            // console.log(arr1);
+            for(let j =0; j< arr1.length; j++){
+                let string = arr1[j]
+                // console.log(typeof string);
+
+
+                if(string == string.toUpperCase()){
+                    arr1[j] = string.toLowerCase()
+                }
+                else{
+                    arr1[j] = string.toUpperCase()
+                }
+            }
+            arr[i]=arr1.join('');
+         }
+        let str1 = arr.join(' ');
+        console.log(str1);
     </script>
 </body>
 
